@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.previous{
+    position: absolute;
+    top: 50%;
+    padding: 30px;
+    transform: translateY(-50%);
+}
+.next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    padding: 30px;
+}
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+    background-position: 50% 50%;
+
+    animation-fill-mode: forwards;
+    animation-duration: 2000ms;
+    animation-timing-function: linear;
+}
+
+.image-1 {
+    background-image: url("https://images.wallpaperscraft.ru/image/single/siluet_portal_svet_139483_1920x1080.jpg");
+}
+
+.image-2 {
+    background-image: url("https://images.wallpaperscraft.ru/image/single/knigi_polka_kollektsiya_119979_1920x1080.jpg");
+}
+
+.image-3 {
+    background-image: url("https://images.wallpaperscraft.ru/image/single/avtomobil_neon_chelovek_137624_1920x1080.jpg");
+}
+
+@keyframes slide-out-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+@keyframes slide-out-right {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes slide-in-from-left {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes slide-in-from-right {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
